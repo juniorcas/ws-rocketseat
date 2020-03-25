@@ -23,7 +23,8 @@
         <meta charset="UTF-8">
         <!-- Responsável por receber configurações da página -->
         <title>Casa Criativa</title>
-
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">"
         <link rel="stylesheet" href="style.css">
 
     </head>
@@ -32,7 +33,7 @@
     <body>
 
         <div id="container">
-            
+
 
             <section id="intro">
 
@@ -65,7 +66,7 @@
             </section>
 
             <section id="last-ideias">
-                <div class="ideia">
+                <div class="idea">
                     <img 
                         src="https://image.flaticon.com/icons/svg/2729/2729007.svg" 
                         alt="Imagem de Curso de Programacao">
@@ -80,21 +81,25 @@
                     </div>
                 </div>
 
-                
-                <img 
-                src="https://image.flaticon.com/icons/svg/2729/2729005.svg" 
-                alt="Imagem de Exercicios">
 
-            <div class="content">
+
+                <div class="idea">
+                    <img 
+                        src="https://image.flaticon.com/icons/svg/2729/2729005.svg" 
+                        alt="Imagem de Exercicios">
+
+                    <div class="content">
                 <h3>Exercicios</h3>
                 <p>Saude</p>
                 <div class="descripition">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde labore perferendis aspernatur nisi distinctio harum illo repudiandae, at quasi dolorum voluptatum iure sint odit suscipit atque aliquid soluta quibusdam veritatis.
                 </div>
                 <a href="#">Ir para a Ideia</a>
-            </div>
+                    </div>
+                </div>
 
-            <div class="ideia">
+
+                <div class="idea">
                 <img 
                     src="https://image.flaticon.com/icons/svg/2729/2729027.svg" 
                     alt="Imagem de Meditacao">
@@ -107,16 +112,58 @@
                     </div>
                     <a href="#">Ir para a Ideia</a>
                 </div>
-            </div>
-        </div>
+                </div>
+        
 
             </section>
 
             
         </div>
          
+        <!-- Modal -->
+        <div id="modal">
+            <div class="content">
+                <h1>Nova Ideia</h1>
+                
+                <form action="">
+                
+                    <div class="input-wrapper">
+                        <label for="title">Titulo da ideia</label>
+                        <input type="text" name="title">
+                    </div>
+                    
+                
+                    <div class="input-wrapper">
+                        <label for="category">Categoria</label>
+                        <input type="text" name="category">
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label for="image">Link da Imagem</label>
+                        <input type="url" name="image">
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label for="description">Digite uma descricao para essa ideia
+                        </label>
+                        <textarea name="description" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label for="link">Link da Ideia</label>
+                        <input type="url" name="link">
+                    </div>
+                
+                    <button>Salvar</button>
+                
+                
+                
+                
+                
+                </form>
+            </div>
+        </div>
         
-    
         <script src="scrip.js"></script>
     </body>
 
