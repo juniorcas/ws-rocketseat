@@ -291,3 +291,10 @@ form button:hover {
     opacity: 0;
     visibility: hidden;
 }
+
+/* IDEIA.HTML */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
