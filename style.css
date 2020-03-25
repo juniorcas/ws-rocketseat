@@ -175,6 +175,8 @@ footer a {
 
     display: flex;
     justify-content: center;
+
+    transition: 400ms;
 }
 
 #modal .content {
@@ -230,6 +232,35 @@ form label {
     letter-spacing: 0.8px;
 }
 
+form a {
+
+    width: 150px;
+    height: 40px;
+
+    background-color: #ffffff22;
+    color: white;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+
+    border-radius: 6px;
+
+    align-self: end; 
+
+    transition: 400ms;
+}
+
+form a:hover {
+    background: #FFF;
+    color: #ff5E84;
+
+    text-decoration: none;
+}
 form button {
     background: white;
 
@@ -243,7 +274,10 @@ form button {
     margin-top: 32px;
 
     grid-column: 2;
+
     justify-self: end;
+
+    transition: 400ms;
 }
 
 form button:hover {
@@ -254,5 +288,6 @@ form button:hover {
 } 
 
 #modal.hide {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
