@@ -20,16 +20,10 @@ body {
     color: #25282b; 
 
     font-family: 'Montserrat', sans-serif;
-
    
 
     margin: 0;
 } 
-
-
-.hide {
-    display: none;
-}
 
 a {
     color: #ff5E84;
@@ -75,7 +69,6 @@ main {
     margin-bottom: 32px;
 
 }
-
 
 
 button {
@@ -169,7 +162,6 @@ footer a {
 }
 
 
-
 /*modal */
 
 #modal {
@@ -183,14 +175,12 @@ footer a {
 
     display: flex;
     justify-content: center;
-
-
 }
 
 #modal .content {
     margin-top: 128px;
 
-    color:white; 
+    color: white; 
 }
 
 #modal .content h1 {
@@ -209,24 +199,28 @@ footer a {
     grid-template-columns: 1fr 1fr;
 
     gap: 20px;
-
 }
 
-.input-wrapper {
-    margin: 16px 0;
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2;
 }
 
-form input {
+form input,
+form textarea {
     width: 100%;
 
     padding: 12px;
+
+    box-sizing: border-box;
 
     border-radius: 6px;
     border: 1px solid rgba(141, 23, 50, 0.5);
 
     outline: none; 
 
-    font-size:16px;
+    font-size: 16px;
 
 }
 
@@ -245,6 +239,11 @@ form button {
     border-radius: 6px;
 
     cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+    justify-self: end;
 }
 
 form button:hover {
@@ -253,3 +252,7 @@ form button:hover {
     
     text-decoration: none;
 } 
+
+#modal.hide {
+    display: none;
+}
