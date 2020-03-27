@@ -5,20 +5,22 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/juniorcas/ws-rocketseat.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Carlos Junior",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/juniorcas/ws-rocketseat/issues"
   },
   "homepage": "https://github.com/juniorcas/ws-rocketseat#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {}
 }
