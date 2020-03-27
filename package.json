@@ -20,7 +20,8 @@
   "homepage": "https://github.com/juniorcas/ws-rocketseat#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "nunjucks": "^3.2.1"
   },
   "devDependencies": {}
 }
