@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Ativos da B3</title>
+{% endblock title %} 
+
+
+{% block content %}
+<section>
+
+
+<h1>
+    Minha Carteira
+</h1>
+<p>
+    Aqui está meus ativos da minha carteira.
+</p>
+
+    {% for ativo in ativos %}
+    
+    <div>
+        <h3>{{ativo.simbolo}}</h3>
+        {{ativo.titulo}}<br>
+        <strong>{{ativo.preco}}</strong>
+        {{(ativo.variacao * 100) | round(2)}}%
+    </div>
+
+    {% endfor %}
+</section>
+{% endblock content %}

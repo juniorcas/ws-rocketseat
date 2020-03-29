@@ -3,8 +3,6 @@ const express = require("express")
 const server = express()
 
 const ideas = [ 
-
-
     {
       img: "https://image.flaticon.com/icons/svg/2729/2729007.svg",
       title: "Cursos de Programacao",
