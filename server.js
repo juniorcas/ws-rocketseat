@@ -50,22 +50,19 @@ nunjucks.configure("views", {
 server.get("/", function(req, res) {
 
   
-  const lastIdeas = [] 
-  for (let idea of ideas) {
+  let lastIdeas = [] 
+  for (let idea of ideas.reverse()) {
       if(lastIdeas.length < 2) {
           lastIdeas.push(idea)
-
       }
   }
-
-  console.log(lastIdeas)
-
 
   return res.render("index.html", { ideas: lastIdeas })
 })
 
 server.get("/ideias", function(req, res) {
-    return res.render("ideias.html")
+
+    return res.render("ideias.html", { ideas: ideas.reverse()})
 })
 
 // liguei meu servidor na porta 3000
