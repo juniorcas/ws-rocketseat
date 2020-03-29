@@ -50,9 +50,18 @@ nunjucks.configure("views", {
 server.get("/", function(req, res) {
 
   
-   
-  
-  return res.render("index.html", { ideas })
+  const lastIdeas = [] 
+  for (let idea of ideas) {
+      if(lastIdeas.length < 2) {
+          lastIdeas.push(idea)
+
+      }
+  }
+
+  console.log(lastIdeas)
+
+
+  return res.render("index.html", { ideas: lastIdeas })
 })
 
 server.get("/ideias", function(req, res) {

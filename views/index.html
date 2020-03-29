@@ -72,20 +72,17 @@
 
             {% for idea in ideas %}
                 <div class="idea">
-                    <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg" alt="Imagem de Curso de Programacao">
+                    <img src="{{idea.img}}" alt="Imagem de {{idea.title}}">
 
                     <div class="content">
-                        <h3>Cursos de Programacao</h3>
-                        <p>Estudo</p>
+                        <h3>{{idea.title}}</h3>
+                        <p>{{idea.category}}</p>
                         <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde labore perferendis aspernatur nisi
-                        distinctio harum illo repudiandae, at quasi dolorum voluptatum iure sint odit suscipit atque
-                        aliquid soluta quibusdam veritatis.
+                            {{idea.description}}
                         </div>
-                        <a href="#">Ir para a Ideia</a>
+                        <a href="{{idea.url}}" target="blank">Ir para a Ideia</a>
                     </div>
                 </div>
-
             {% endfor %}
 
          
