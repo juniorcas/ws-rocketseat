@@ -33,6 +33,20 @@ const ideas = [
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde labore perferendis ",
       url: "https://rocketseat.com.br"
     },
+    {
+      img: "https://image.flaticon.com/icons/svg/2729/2729038.svg",
+      title: "Pintura",
+      category: "Criatividade",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde labore perferendis ",
+      url: "https://rocketseat.com.br"
+    },
+    {
+      img: "https://image.flaticon.com/icons/svg/2729/2729048.svg",
+      title: "Recortes",
+      category: "Criatividade",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde labore perferendis ",
+      url: "https://rocketseat.com.br"
+    },
 ]
 // configurar arquivos estáticos (css, scripts, imagens)
 server.use(express.static("public"))
@@ -49,9 +63,10 @@ nunjucks.configure("views", {
 // e capturo o pedido do cliente para responder
 server.get("/", function(req, res) {
 
-  
+    const reversedIdeas = [...ideas].reverse()
+
   let lastIdeas = [] 
-  for (let idea of ideas.reverse()) {
+  for (let idea of reversedIdeas) {
       if(lastIdeas.length < 2) {
           lastIdeas.push(idea)
       }
@@ -62,7 +77,9 @@ server.get("/", function(req, res) {
 
 server.get("/ideias", function(req, res) {
 
-    return res.render("ideias.html", { ideas: ideas.reverse()})
+  const reversedIdeas = [...ideas].reverse()
+
+    return res.render("ideias.html", { ideas: reversedIdeas})
 })
 
 // liguei meu servidor na porta 3000
