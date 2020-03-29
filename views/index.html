@@ -27,14 +27,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">"
     <link rel="stylesheet" href="/style.css">
-
 </head>
-
 
 <body>
 
-    <div id="container">
 
+    <div id="container">
 
         <section id="intro">
 
@@ -72,29 +70,26 @@
         <section id="last-ideias">
 
 
+            {% for idea in ideas %}
+                <div class="idea">
+                    <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg" alt="Imagem de Curso de Programacao">
 
-
-
-
-
-
-            <div class="idea">
-                <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg" alt="Imagem de Curso de Programacao">
-
-                <div class="content">
-                    <h3>Cursos de Programacao</h3>
-                    <p>Estudo</p>
-                    <div class="descripition">
+                    <div class="content">
+                        <h3>Cursos de Programacao</h3>
+                        <p>Estudo</p>
+                        <div class="description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde labore perferendis aspernatur nisi
                         distinctio harum illo repudiandae, at quasi dolorum voluptatum iure sint odit suscipit atque
                         aliquid soluta quibusdam veritatis.
+                        </div>
+                        <a href="#">Ir para a Ideia</a>
                     </div>
-                    <a href="#">Ir para a Ideia</a>
                 </div>
-            </div>
 
+            {% endfor %}
 
-       
+         
+
         </section>
 
 

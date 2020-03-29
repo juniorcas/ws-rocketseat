@@ -2,7 +2,9 @@
 const express = require("express")
 const server = express()
 
-const ideas = [
+const ideas = [ 
+
+
     {
       img: "https://image.flaticon.com/icons/svg/2729/2729007.svg",
       title: "Cursos de Programacao",
@@ -32,10 +34,8 @@ const ideas = [
       url: "https://rocketseat.com.br"
     },
 ]
-
 // configurar arquivos estáticos (css, scripts, imagens)
 server.use(express.static("public"))
-
 
 //configuracão do nunjunks
 const nunjucks = require("nunjucks")
@@ -45,12 +45,12 @@ nunjucks.configure("views", {
 })
 
 
-
 // criei uma rota /
 // e capturo o pedido do cliente para responder
 server.get("/", function(req, res) {
 
   
+   
   
   return res.render("index.html", { ideas })
 })
