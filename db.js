@@ -15,31 +15,7 @@ db.serialize(function() {
         );
     `)
     
-    // Inserir dado na tabela 
-    // const query = `
-    // INSERT INTO ideas(
-    //    image,
-    //    title,
-    //    category,
-    //    description,
-    //    link
-    // ) VALUES (?,?,?,?,?);
-    // `
 
-    // const values = [
-    //    "https://image.flaticon.com/icons/svg/2729/2729007.svg",
-    //    "Cursos de Programacao",
-    //    "Estudo",
-    //    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde labore perferendis ",
-    //    "https://rocketseat.com.br"
-    // ]
-
-
-    //db.run(query, values, function(err) {
-    //    if (err) return console.log(err)
-
-    //    console.log(this)
-    // })
     
     
     // Deletar um dado da tabela 
